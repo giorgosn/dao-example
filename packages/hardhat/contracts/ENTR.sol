@@ -8,8 +8,8 @@ import "hardhat/console.sol";
 contract ENTR is ERC20Burnable, ERC20Permit, Ownable {
 
     uint256 private constant SUPPLY = 100_000_000 * 10**18;
-
-    constructor() ERC20("ENTER Governance Token", "ENTR") ERC20Permit("ENTR") {
+    constructor(address _owner) ERC20("ENTER Governance Token", "ENTR") ERC20Permit("ENTR") {
+        transferOwnership(_owner);
         _mint(msg.sender, SUPPLY);
     }
 
