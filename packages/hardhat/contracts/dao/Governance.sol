@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 
 import "./interfaces/IKernel.sol";
 import "./Bridge.sol";
-import "./openZeppelin/SafeMath.sol";
+import "../openZeppelin/math/SafeMath.sol";
 
 contract Governance is Bridge {
     using SafeMath for uint256;

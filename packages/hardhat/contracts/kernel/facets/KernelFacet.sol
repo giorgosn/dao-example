@@ -5,8 +5,8 @@ pragma experimental ABIEncoderV2;
 import "../interfaces/IKernel.sol";
 import "../libraries/LibKernelStorage.sol";
 import "../libraries/LibOwnership.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../../openZeppelin/math/SafeMath.sol";
+import "../../openZeppelin/token/ERC20/IERC20.sol";
 
 contract KernelFacet {
     using SafeMath for uint256;
