@@ -2,9 +2,9 @@
 pragma solidity 0.7.6;
 pragma experimental ABIEncoderV2;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../openZeppelin/access/Ownable.sol";
+import "../openZeppelin/math/SafeMath.sol";
+import "../openZeppelin/token/ERC20/IERC20.sol";
 import "./interfaces/IKernel.sol";
 
 contract Rewards is Ownable {

@@ -2,8 +2,8 @@
 pragma solidity 0.7.6;
 
 import "../interfaces/IKernel.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
+import "../../openZeppelin/token/ERC20/IERC20.sol";
+import "../../openZeppelin//math/SafeMath.sol";
 
 contract MulticallMock {
     using SafeMath for uint256;
