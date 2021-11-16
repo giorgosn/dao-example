@@ -455,6 +455,16 @@ function App(props) {
               YourContract
             </Link>
           </Menu.Item>
+          <Menu.Item key="/DiamondCutFacet">
+            <Link
+              onClick={() => {
+                setRoute("/DiamondCutFacet");
+              }}
+              to="/DiamondCutFacet"
+            >
+              DiamondCutFacet
+            </Link>
+          </Menu.Item>
           <Menu.Item key="/hints">
             <Link
               onClick={() => {
@@ -498,6 +508,23 @@ function App(props) {
         </Menu>
 
         <Switch>
+        <Route exact path="/DiamondCutFacet">
+            {/*
+                🎛 this scaffolding is full of commonly used components
+                this <Contract/> component will automatically parse your ABI
+                and give you a form to interact with it locally
+            */}
+
+            <Contract
+              name="DiamondCutFacet"
+              price={price}
+              signer={userSigner}
+              provider={localProvider}
+              address={address}
+              blockExplorer={blockExplorer}
+              contractConfig={contractConfig}
+            />
+          </Route>
           <Route exact path="/">
             {/*
                 🎛 this scaffolding is full of commonly used components

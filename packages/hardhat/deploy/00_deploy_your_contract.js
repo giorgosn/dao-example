@@ -16,6 +16,13 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     log: true,
   });
 
+  await deploy("DiamondCutFacet", {
+    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+    from: deployer,
+    // args: ["0x2498cCcc55Aa7A2842cF6008615987482A426F7B"],
+    log: true,
+  });
+
   // Getting a previously deployed contract
   // const YourContract = await ethers.getContract("Pasok", deployer);
   /*  await YourContract.setPurpose("Hello");
@@ -61,4 +68,4 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   //   });
   // }
 };
-module.exports.tags = ["ENTR"];
+module.exports.tags = ["ENTR","DiamondCutFacet"];
