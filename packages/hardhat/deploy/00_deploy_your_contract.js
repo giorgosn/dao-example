@@ -22,6 +22,18 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     // args: ["0x2498cCcc55Aa7A2842cF6008615987482A426F7B"],
     log: true,
   });
+  await deploy("DiamondLoupeFacet", {
+    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+    from: deployer,
+    // args: ["0x2498cCcc55Aa7A2842cF6008615987482A426F7B"],
+    log: true,
+  });
+  await deploy("OwnershipFacet", {
+    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+    from: deployer,
+    // args: ["0x2498cCcc55Aa7A2842cF6008615987482A426F7B"],
+    log: true,
+  });
 
   // Getting a previously deployed contract
   // const YourContract = await ethers.getContract("Pasok", deployer);
@@ -68,4 +80,4 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   //   });
   // }
 };
-module.exports.tags = ["ENTR","DiamondCutFacet"];
+module.exports.tags = ["ENTR","DiamondCutFacet","DiamondLoupeFacet"];

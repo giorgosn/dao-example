@@ -452,7 +452,17 @@ function App(props) {
               }}
               to="/"
             >
-              YourContract
+              ENTR
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/OwnershipFacet">
+            <Link
+              onClick={() => {
+                setRoute("/OwnershipFacet");
+              }}
+              to="/OwnershipFacet"
+            >
+              DiamondCutFacet
             </Link>
           </Menu.Item>
           <Menu.Item key="/DiamondCutFacet">
@@ -463,6 +473,16 @@ function App(props) {
               to="/DiamondCutFacet"
             >
               DiamondCutFacet
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/DiamondLoupeFacet">
+            <Link
+              onClick={() => {
+                setRoute("/DiamondLoupeFacet");
+              }}
+              to="/DiamondLoupeFacet"
+            >
+              DiamondLoupeFacet
             </Link>
           </Menu.Item>
           <Menu.Item key="/hints">
@@ -508,13 +528,18 @@ function App(props) {
         </Menu>
 
         <Switch>
+        <Route exact path="/OwnershipFacet">
+            <Contract
+              name="OwnershipFacet"
+              price={price}
+              signer={userSigner}
+              provider={localProvider}
+              address={address}
+              blockExplorer={blockExplorer}
+              contractConfig={contractConfig}
+            />
+          </Route>
         <Route exact path="/DiamondCutFacet">
-            {/*
-                🎛 this scaffolding is full of commonly used components
-                this <Contract/> component will automatically parse your ABI
-                and give you a form to interact with it locally
-            */}
-
             <Contract
               name="DiamondCutFacet"
               price={price}
@@ -525,13 +550,18 @@ function App(props) {
               contractConfig={contractConfig}
             />
           </Route>
+          <Route exact path="/DiamondLoupeFacet">
+            <Contract
+              name="DiamondLoupeFacet"
+              price={price}
+              signer={userSigner}
+              provider={localProvider}
+              address={address}
+              blockExplorer={blockExplorer}
+              contractConfig={contractConfig}
+            />
+          </Route>
           <Route exact path="/">
-            {/*
-                🎛 this scaffolding is full of commonly used components
-                this <Contract/> component will automatically parse your ABI
-                and give you a form to interact with it locally
-            */}
-
             <Contract
               name="ENTR"
               price={price}
